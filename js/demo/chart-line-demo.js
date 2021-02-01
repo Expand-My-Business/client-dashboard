@@ -37,23 +37,48 @@ var myLineChart = new Chart(ctx, {
         {
           data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
           label: "Impression",
-          borderColor: "#F4B400",
-          backgroundColor: "#F4B400",
-          fill: false
+          lineTension: 0.3,
+          borderColor: "rgb(244, 182, 8)",
+          backgroundColor: "rgb(244, 182, 8,0.05)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(244, 182, 8, 1)",
+          pointBorderColor: "rgba(244, 182, 8, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(244, 182, 8, 1)",
+          pointHoverBorderColor: "rgba(244, 182, 8, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          fill: true
         },
         {
           data: [2820, 3500, 1200, 5020, 6350, 5090, 7470, 1402, 3700, 5267],
           label: "CPC",
-          borderColor: "#0F9D58",
-          backgroundColor: "#0F9D58",
-          fill: false
+          borderColor: "rgb(15, 157, 88)",
+          backgroundColor: "rgb(15, 157, 88,0.05)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(15, 157, 88, 1)",
+          pointBorderColor: "rgba(15, 157, 88, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(15, 157, 88, 1)",
+          pointHoverBorderColor: "rgba(15, 157, 88, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          fill: true
         },
         {
           data: [1680, 1700, 1780, 1900, 2030, 2760, 4080, 5470, 6750, 7340],
           label: "Click",
-          borderColor: "#4285F4",
-          backgroundColor: "#4285F4",
-          fill: false
+          borderColor: "rgb(54, 185, 204)",
+          backgroundColor: "rgb(54, 185, 204,0.05)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(54, 185, 204, 1)",
+          pointBorderColor: "rgba(54, 185, 204, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(54, 185, 204, 1)",
+          pointHoverBorderColor: "rgba(54, 185, 204, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          fill: true
         }
       ]
     },
@@ -92,17 +117,22 @@ var myLineChart = new Chart(ctx, {
       },
       tooltips: {
         mode: "point",
-        backgroundColor: "rgba(0, 98, 90, 1)",
-        yPadding: 10,
-        xPadding: 50,
+        backgroundColor: "rgb(255,255,255)",
+        bodyFontColor: "#858796",
+        titleMarginBottom: 10,
+        titleFontColor: '#6e707e',
+        titleFontSize: 14,
+        borderColor: '#dddfeb',
+        borderWidth: 1,
+        yPadding: 20,
+        xPadding: 20,
         titleAlign: "center",
         bodyAlign: "center",
-        displayColors: false
+        displayColors: true
       },
       scales: {
         xAxes: [
           {
-              
             time: {
                 unit: 'day'
               },
@@ -111,7 +141,7 @@ var myLineChart = new Chart(ctx, {
                 drawBorder: false
               },
             ticks: {
-                maxTicksLimit: 6,
+                maxTicksLimit: 10,
               // Include a dollar sign in the ticks
               callback: function (value, index, values) {
                 return value;

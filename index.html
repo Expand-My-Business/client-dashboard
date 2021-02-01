@@ -24,6 +24,10 @@
     
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
+    <style>
+       @import url(https://fonts.googleapis.com/css?family=Karla:400,700);
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -307,6 +311,11 @@
                             <div class="dt-picker text-right ml-auto mb-4">
                                 <input type="text" name="daterange" value="01/01/2021 - 01/15/2021" class="form-control col-md-2 ml-auto" style="font-size: 14px;" />
                             </div>
+                            <div id="overlay" style="display:none;">
+                                <div class="spinner"></div>
+                                <br/>
+                                Loading...
+                            </div>
                         </div>    
 
                         <!-- Profile Card Example -->
@@ -314,10 +323,13 @@
                             <div class="card shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2 text-center">
-                                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                        <div class="col mr-2 ">
+                                            <div class="text-sm  card-text font-ks mb-1">
                                                 Total Amount Spent</div>
-                                            <div class="h5 mb-0 font-weight-bold text-primary">₹ 1,50,000</div>
+                                            <div class="h5 mb-0 font-weight-bold font-ks">₹ 1,50,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-sort-amount-up fa-lg text-success"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -329,10 +341,13 @@
                             <div class="card shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2 text-center">
-                                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                        <div class="col mr-2">
+                                            <div class="text-sm card-text font-ks mb-1">
                                                 Remaining Amount Spent</div>
-                                            <div class="h5 mb-0 font-weight-bold text-success">₹ 215,000</div>
+                                            <div class="h5 mb-0 font-weight-bold font-ks">₹ 215,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-sort-amount-down fa-lg text-warning"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -344,10 +359,13 @@
                             <div class="card  shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2 text-center">
-                                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                        <div class="col mr-2">
+                                            <div class="text-sm card-text font-ks mb-1">
                                                 Total Impressions</div>
-                                            <div class="h5 mb-0 font-weight-bold text-warning">150k</div>
+                                            <div class="h5 mb-0 font-weight-bold font-ks">150k</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="far fa-eye fa-lg text-primary"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -359,10 +377,13 @@
                             <div class="card  shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2 text-center">
-                                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                        <div class="col mr-2">
+                                            <div class="text-sm card-text font-ks mb-1">
                                                 Total CPC</div>
-                                            <div class="h5 mb-0 font-weight-bold text-info">18k</div>
+                                            <div class="h5 mb-0 font-weight-bold font-ks">18k</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-chart-line fa-lg text-danger"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -374,10 +395,13 @@
                             <div class="card  shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2 text-center">
-                                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                        <div class="col mr-2">
+                                            <div class="text-sm card-text font-ks mb-1">
                                                 Total Clicks</div>
-                                            <div class="h5 mb-0 font-weight-bold text-danger">5,000</div>
+                                            <div class="h5 mb-0 font-weight-bold font-kd">5,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="far fa-hand-pointer fa-lg text-info"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -389,10 +413,13 @@
                             <div class="card  shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2 text-center">
-                                            <div class="text-xs font-weight-bold text-gray-800  text-uppercase mb-1">
+                                        <div class="col mr-2 ">
+                                            <div class="text-sm card-text font-ks mb-1">
                                                 Title</div>
-                                            <div class="h5 mb-0 font-weight-bold text-success">₹ 215,000</div>
+                                            <div class="h5 mb-0 font-weight-bold  font-ks">₹ 215,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="far fa-chart-bar fa-lg text-truncate"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -549,12 +576,33 @@
     <script>
         /* $('input[name="dates"]').daterangepicker(); */
         $(function() {
-  $('input[name="daterange"]').daterangepicker({
-    opens: 'left'
-  }, function(start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
-});
+            $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+            }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+               
+                console.log('Start Date:'+start.date());
+                console.log('End Date:'+end.date());
+            });
+        });
+        //Loader on DateRange btn click
+        $(document).ready(function() {
+            $('.applyBtn').click(function(){
+                $('#overlay').fadeIn().delay(2000).fadeOut();
+            });
+        });
+        //Get value of Start and End Date 
+        /* $(document).ready(function() {
+            var drp = $('#daterange').data('daterangepicker');
+            $('.applyBtn').click(function(){
+               $('.start-date').click(function(){
+                    var start_date = $(this).val();
+
+                    console.log(start_date);
+               });
+            });
+        }); */
+        
     </script>
 </body>
 

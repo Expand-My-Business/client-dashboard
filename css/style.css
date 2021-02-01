@@ -11642,6 +11642,56 @@ margin-right: 10px;
 /* ---Support--- */
 
 
+/* CLient-dashboard */
+@import url(https://fonts.googleapis.com/css?family=Karla:400,700);
+
+.font-ks{
+font-family: Karla,sans-serif;
+color: #343a40;
+}
+.card-text{
+color: #858796;
+text-transform: capitalize;
+font-weight: 600!important;
+}
+
+#overlay {
+background: #ffffff;
+color: #666666;
+position: fixed;
+height: 100%;
+width: 100%;
+z-index: 5000;
+top: 0;
+left: 0;
+float: left;
+text-align: center;
+padding-top: 25%;
+opacity: .80;
+}
+/* button {
+margin: 40px;
+padding: 5px 20px;
+cursor: pointer;
+} */
+.spinner {
+margin: 0 auto;
+height: 64px;
+width: 64px;
+animation: rotate 0.8s infinite linear;
+border: 5px solid #000;
+border-right-color: transparent;
+border-radius: 50%;
+}
+@keyframes rotate {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(360deg);
+}
+}
+
 /* ::-webkit-scrollbar {
     width: 10px;
 }
